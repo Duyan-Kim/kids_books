@@ -8,7 +8,14 @@ const BookContainer = (props) => {
       <p className="mt-3 mb-5 pb-3">{props.pubDate}</p>
       <div className="container mb-5">
         <div className="row">
-          <BookItem />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
+          <BookItem title="돼지책" author="앤서니" img={} />
         </div>
       </div>
     </div>

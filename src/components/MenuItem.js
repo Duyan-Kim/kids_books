@@ -1,13 +1,13 @@
 import React from "react";
 
-const MenuItem = () => {
+const MenuItem = (props) => {
   return (
     <div className="col-lg-4">
       <div className="icon">
-        <img src="../img/rankicon.svg" alt="아이콘" />
+        <img src={props.src} alt="아이콘" />
       </div>
-      <h3></h3>
-      <p></p>
+      <h3>{props.name}</h3>
+      <p>{props.desc}</p>
       <a>보기</a>
     </div>
   );
