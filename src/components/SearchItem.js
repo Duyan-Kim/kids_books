@@ -1,23 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
+import FormControl from "react-bootstrap/FormControl";
 
 const SearchItem = () => {
   return (
-    <form className="form-inline my-2 my-lg-0 search-form">
-      <input
-        className="form-control mr-sm-2"
-        type="search"
-        placeholder="책 검색"
-        aria-label="Search"
-      />
-      <button className="btn btn-outline-light my-2 my-sm-0" type="submit">
-        검색
-      </button>
-    </form>
+    <div className="inputGroupDiv">
+      <InputGroup>
+        <FormControl placeholder="책검색" className="FormControl" />
+        <InputGroup.Append>
+          <Button variant="outline-secondary">Search</Button>
+        </InputGroup.Append>
+      </InputGroup>
+    </div>
   );
 };
 
-SearchItem.PropTypes = {
+SearchItem.propTypes = {
   value: PropTypes.string,
 };
 

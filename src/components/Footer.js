@@ -1,25 +1,21 @@
-import React from "react"
+import React from "react";
+import bookIcon from "../img/bookicon.svg";
 
 const Footer = () => {
-    return (
-        <div className="container mt-5 pt-5">
-            <div className="text-center">
-                <div className="footer-logo">
-                    <img src="../img/bookicon.svg">
-                </div>
-                <hr>
-                <span>어린이책방</span>
-            </div>
-            <div className="footer-contact">
-                <p>interpark nyt bestseller api</p>
-                <div className="footer-icon">
-                    <a href="" className="icon"><i className="fas fa-phone-alt m-3"></i></a>
-                    <a href="" className="icon"><i className="fab fa-google m-3"></i></a>
-                    <a href="" className="icon"><i className="fab fa-instagram m-3"></i></a>
-                </div>
-            </div>
+  return (
+    <div className="footer container mt-3 bt-3">
+      <div className="text-center">
+        <div className="footer-logo">
+          <img src={bookIcon} alt={bookIcon} />
         </div>
-    )
-}
+        <hr />
+        <span>어린이책방</span>
+      </div>
+      <div className="footer-contact">
+        <p>INTERPARK KAKAO BOOK API</p>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;

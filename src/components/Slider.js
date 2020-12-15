@@ -1,14 +1,19 @@
 import React from "react";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Button from "react-bootstrap/Button";
 
 function Slider(props) {
   return (
-    <div>
-      <img src={props.src} alt="헤더 이미지" />
-      <h5>{props.text}</h5>
+    <Jumbotron>
+      <h3>메인 글귀</h3>
       <p>
-        <a href="#">{props.link}</a>
+        This is a simple hero unit, a simple jumbotron-style component for
+        calling extra attention to featured content or information.
       </p>
-    </div>
+      <p>
+        <Button>Learn more</Button>
+      </p>
+    </Jumbotron>
   );
 }
 
