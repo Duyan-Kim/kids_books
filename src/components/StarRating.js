@@ -3,6 +3,8 @@ import { FaStar } from "react-icons/fa";
 
 const StarRating = () => {
   const [rating, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
+
   return (
     <div>
       {[...Array(5)].map((star, i) => {
@@ -16,7 +18,13 @@ const StarRating = () => {
               value={ratingValue}
               onClick={() => setRating(ratingValue)}
             />
-            <FaStar className="star" color={ratingValue =< rating ? "#f8dfd8" : "#686767"} size={15} />
+            <FaStar
+              className="star"
+              color={(ratingValue) => (hover || rating ? "#F8CE08" : "#F8CE08")}
+              size={20}
+              onMouseEnter={() => setHover(ratingValue)}
+              onMouseLeave={() => setHover(null)}
+            />
           </label>
         );
       })}

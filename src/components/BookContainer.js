@@ -7,11 +7,20 @@ import Row from "react-bootstrap/Row";
 
 const BookContainer = (props) => {
   return (
-    <div className="layout6">
+    <div className="layout6" id="book-container-layout">
       <div className="bookcontainer-name-div">
         <h2>{props.name}</h2>
         <Form>
-          <Form.Check type="switch" id={props.name} label="줄거리 보기" />
+          <Form.Check
+            type="switch"
+            id={props.name}
+            label="줄거리 보기"
+            onChange={() => {
+              const layout6 = document.getElementById("book-container-layout");
+              layout6.classList.toggle("layout6");
+              layout6.classList.toggle("layout2");
+            }}
+          />
         </Form>
       </div>
       <Container>
