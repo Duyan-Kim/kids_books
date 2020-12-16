@@ -5,13 +5,10 @@ import Button from "react-bootstrap/Button";
 function Slider(props) {
   return (
     <Jumbotron>
-      <h3>메인 글귀</h3>
+      <p>- 프란츠 카프카 -</p>
+      <h3>“책은 우리 내면에 얼려있는 바다를 내려치는 도끼 같아야 한다”</h3>
       <p>
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
-      <p>
-        <Button>Learn more</Button>
+        <Button>나의 책방 만들기</Button>
       </p>
     </Jumbotron>
   );

@@ -9,7 +9,7 @@ const Footer = () => {
           <img src={bookIcon} alt={bookIcon} />
         </div>
         <hr />
-        <span>어린이책방</span>
+        <span>책방이름</span>
       </div>
       <div className="footer-contact">
         <p>INTERPARK KAKAO BOOK API</p>
