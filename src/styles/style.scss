@@ -238,32 +238,32 @@ $regular: 400;
             opacity: 0.3;
           }
         }
+        h5 {
+          margin: 0;
+          flex-wrap: wrap;
+          font-weight: 700;
+
+          font-size: 24px;
+          color: $dark-black-Color;
+          flex-basis: 1;
+          flex: 1 1 auto;
+        }
+        p {
+          flex-basis: 1;
+          flex-wrap: wrap;
+          flex: 1 1 30%;
+        }
       }
-      h5 {
-        margin: 0;
+      input[type="radio"] {
+        display: none;
         flex-wrap: wrap;
-        font-weight: 700;
-
-        font-size: 24px;
-        color: $dark-black-Color;
-        flex-basis: 200px;
-        flex: 1 1 auto;
       }
-      p {
-        flex-basis: 1;
-
-        flex: 1 1 auto;
+      .star {
+        cursor: pointer;
+        transition: color 200ms;
       }
-    }
-    input[type="radio"] {
-      display: none;
-      flex-wrap: wrap;
-    }
-    .star {
-      cursor: pointer;
-      transition: color 200ms;
-    }
-    .summary {
+      .summary {
+      }
     }
   }
 

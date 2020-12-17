@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BookItem from "./BookItem";
 import Form from "react-bootstrap/Form";
-import BookCover from "../img/cover4.jpg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import { getBestSeller } from "../api";
 
 const BookContainer = (props) => {
+  const [bookItemArray, setBookItemArray] = useState([]);
+  useEffect(() => {
+    async function getData() {
+      const res = await getBestSeller(props.categoryId);
+      setBookItemArray(res.data.item);
+    }
+    getData();
+  }, []);
+
   return (
     <div className="layout6" id="book-container-layout">
       <div className="bookcontainer-name-div">
@@ -25,12 +34,16 @@ const BookContainer = (props) => {
       </div>
       <Container>
         <Row>
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
-          <BookItem title="돼지책" author="앤서니" img={BookCover} />
+          {bookItemArray.slice(0, 6).map((item) => {
+            return (
+              <BookItem
+                key={item.itemId}
+                title={item.title}
+                author={item.author}
+                img={item.coverLargeUrl}
+              />
+            );
+          })}
         </Row>
       </Container>
     </div>
