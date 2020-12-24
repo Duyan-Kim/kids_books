@@ -210,7 +210,6 @@ $regular: 400;
       margin: 0 20px 30px 20px;
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
       font-weight: 400;
       padding: 30px;
       border-radius: 5px;
@@ -238,11 +237,13 @@ $regular: 400;
             opacity: 0.3;
           }
         }
+      }
+      .search-result-description {
+        justify-content: start;
         h5 {
-          margin: 0;
+          margin-bottom: 10px;
           flex-wrap: wrap;
           font-weight: 700;
-
           font-size: 24px;
           color: $dark-black-Color;
           flex-basis: 1;
@@ -252,17 +253,20 @@ $regular: 400;
           flex-basis: 1;
           flex-wrap: wrap;
           flex: 1 1 30%;
+          margin-bottom: 10px;
         }
-      }
-      input[type="radio"] {
-        display: none;
-        flex-wrap: wrap;
-      }
-      .star {
-        cursor: pointer;
-        transition: color 200ms;
-      }
-      .summary {
+        div {
+          input[type="radio"] {
+            display: none;
+            flex-wrap: wrap;
+          }
+          .star {
+            cursor: pointer;
+            transition: color 200ms;
+          }
+          .summary {
+          }
+        }
       }
     }
   }

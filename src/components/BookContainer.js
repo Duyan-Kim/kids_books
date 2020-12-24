@@ -3,13 +3,19 @@ import BookItem from "./BookItem";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { getBestSeller } from "../api";
+import { getBestSeller, getNewBook } from "../api";
 
 const BookContainer = (props) => {
   const [bookItemArray, setBookItemArray] = useState([]);
   useEffect(() => {
+    const activeTab = document.getElementsByClassName("tab-pane");
+    const getBookArray = activeTab[1].classList.contains("active")
+      ? getBestSeller
+      : activeTab[2].classList.contains("active")
+      ? getNewBook
+      : null;
     async function getData() {
-      const res = await getBestSeller(props.categoryId);
+      const res = await getBookArray(props.categoryId);
       setBookItemArray(res.data.item);
     }
     getData();

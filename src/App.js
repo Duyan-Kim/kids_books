@@ -22,19 +22,12 @@ const App = () => {
             <SearchResult title="돼지책" author="앤서니" img={BookCover} />
           </Tab>
           <Tab eventKey="Bestsellers" title="Bestsellers">
-            <BookContainer
-              name="소설 베스트셀러"
-              categoryId="101"
-              pubDate="2020-12-09"
-            />
-            <BookContainer
-              name="시/에세이 베스트셀러"
-              categoryId="102"
-              pubDate="2020-12-09"
-            />
+            <BookContainer name="소설 베스트셀러" categoryId="101" />
+            <BookContainer name="시/에세이 베스트셀러" categoryId="102" />
           </Tab>
           <Tab eventKey="New" title="New">
-            <BookContainer name="신간도서" pubDate="2020-12-09" />
+            <BookContainer name="소설 신간" categoryId="101" />
+            <BookContainer name="시/에세이 신간" categoryId="102" />
           </Tab>
           <Tab eventKey="My books" title="My books"></Tab>
         </Tabs>
